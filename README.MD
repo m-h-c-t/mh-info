@@ -6,3 +6,4 @@ Please submit a PR adding one (or more) line(s) to appropriate section. Please d
 ```
 (Obviously replace the url and Name Of My Awesome Tool Here)
 
+Details coming!
