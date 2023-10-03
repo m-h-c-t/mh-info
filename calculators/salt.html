@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<HTML>
+<head>
+    <title>Salt Efficiency Calculator</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 5px;
+        }
+    </style>
+    <script type="text/javascript" src="src/salt.js"></script>
+</head>
+<body>
+    <form id="theForm">
+    <table>
+        <tbody>
+            <tr>
+                <td>Setup Power</td>
+                <td><input name="setup_power" id="setup_power" type="number" value="0" min="0"></td>
+            </tr>
+            <tr>
+                <td>Setup Luck</td>
+                <td><input name="setup_luck" id="setup_luck" type="number" value="0" min="0"></td>
+            </tr>
+            <tr>
+                <td>
+                    Which Salt Charm?
+                </td>
+                <td><select name="which_charm" id="which_charm">
+                    <option value="0">No Charm</option>
+                    <option value="1">Grub Salt Charm</option>
+                    <option value="2">Super Salt Charm</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>
+                    (LE) Sodium Base?
+                </td>
+                <td>
+                    <input type="checkbox" name="sodiumBool" id="sodiumBool">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    (LE) Anniversary Trap?
+                </td>
+                <td>
+                    <input type="checkbox" name="anniversaryBool" id="anniversaryBool">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="button" name="calcIt" value="Calculate It!" onClick="calcMatrix()">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    </form>
+<p></p>
+    <table id="summary">
+        <tbody>
+        <tr>
+            <td>&nbsp;</td>
+            <td>Minimum</td>
+            <td>Salt Level</td>
+        </tr>
+        <tr>
+            <td>Hunts</td>
+            <td id="minHuntsSeen">--</td>
+            <td id="minHuntsSaltLevel">--</td>
+        </tr>
+        <tr>
+            <td>Ber Cost</td>
+            <td id="minBerSeen">--</td>
+            <td id="minBerSaltLevel">--</td>
+        </tr>
+        </tbody>
+    </table>
+    <p></p>
+    <table id="results">
+        <thead></thead>
+        <tr>
+            <th>Salt Level</th>
+            <th>Catch Rate</th>
+            <th>Hunts to Catch</th>
+            <th>Ber Cost</th>
+            <th>Total Hunts</th>
+        </tr>
+        <tbody id="resultsBody"></tbody>
+    </table>
+</body>
+</HTML>
